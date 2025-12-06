@@ -7,13 +7,25 @@ import Counter from "./counter"
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Light Rays Animation */}
-      <div className="absolute inset-0 overflow-hidden">
-        <LightRays />
+   <div className="absolute inset-0 w-full h-full">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#f7941d"
+          raysSpeed={1.2}
+          lightSpread={0.2}
+          rayLength={8.0}
+          pulsating={false}
+          fadeDistance={4.0}
+          saturation={3.0}
+          followMouse={true}
+          mouseInfluence={0.08}
+          noiseAmount={0.0}
+          distortion={0.25}
+        />
       </div>
 
       {/* Dark Overlay for Readability */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/10" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
@@ -28,9 +40,10 @@ export default function Hero() {
         </h1>
 
         {/* Subheading */}
-       <p className="text-sm sm:text-base text-gray-300 mb-8 text-balance">
+        <p className="text-sm sm:text-base text-gray-300 mb-8 text-balance">
   Authentic Udupi & Multi-Cuisine Catering for Weddings, House Functions & Corporate Events
 </p>
+
 
         <div className="mb-12">
           <Counter end={1800} duration={2500} />

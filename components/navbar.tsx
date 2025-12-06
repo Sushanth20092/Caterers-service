@@ -42,7 +42,7 @@ export default function Navbar() {
               alt="Shivagiri Caterers"
               width={200}
               height={200}
-              className="w-10 h-10 sm:w-12 sm:h-12"
+              className="w-16 h-16 sm:w-19 sm:h-19"
             />
           </Link>
 
